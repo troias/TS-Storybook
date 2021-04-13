@@ -1,30 +1,35 @@
 
 import './App.css';
-import { useState } from 'react'
-import Wrapper from './components/UI/atoms/wrappers/wrapper'
-import Title from './components/UI/atoms/titles/Title'
-import Button from './components/UI/atoms/buttons/button'
+import {useSelector} from 'react-redux'
+import styled, { ThemeProvider, createGlobalStyle } from 'styled-components'
+import { GlobalStyle } from './components/UI/styles/globalStyles'
+
+
 
 function App() {
 
-  const [btnState, setBtnState ] = useState(false)
+const theme = useSelector((state: any) => state.theme)
 
-  const btnHandler = () => {
-    setBtnState(!btnState)
-    console.log(btnState)
-  }
+const StyledH1 = styled.h1` 
+color: ${(props: any) => props.theme.primary};
+`
 
   return (
    
-    <div className="App">
-      <header className="App-header">
-      <Wrapper primary={btnState} onClick={btnHandler}>
-      <Title primary={btnState} onClick={btnHandler}> Hello World</Title>
-      <Button primary={btnState} onClick={btnHandler}> Primary </Button>
-      </Wrapper>
-     
-      </header>
-    </div>
+      <ThemeProvider theme={theme}>
+          <div className="App">
+        <GlobalStyle/>
+        <StyledH1>
+        React themes
+        </StyledH1>
+        <header className="App-header">
+
+        </header>
+      
+          </div>
+      
+      </ThemeProvider>
+
   
   );
 }

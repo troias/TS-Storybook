@@ -27,11 +27,11 @@ myStory.parameters = {
 // )
 
 export const darkTheme = () => (
-  <Button primary={true} onClick={action('clicked')}> darkTheme </Button>   
+  <Button onClick={action('clicked')}> darkTheme </Button>   
 )
 // export const darkTheme = myStory.bind({});
 
-darkTheme.story = {
-  primary: false,
-  child: "text"
-};
+// darkTheme.story = {
+//   primary: false,
+//   child: "text"
+// };

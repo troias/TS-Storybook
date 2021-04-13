@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 
 const Button = styled.button`
-    background: ${(props: { primary: boolean }) => 
-    props.primary ? "white" : "palevioletred"};
-    color: ${(props: { primary: boolean }) => 
-    props.primary ? "green" : "black"};
+    background: ${(props: { theme: any }) => props.theme ? "white" : "palevioletred"};
+    color:  ${(props: { theme: any }) =>props.theme ? "green" : "black"};
     
 
     

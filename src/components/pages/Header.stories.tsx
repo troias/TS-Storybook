@@ -25,7 +25,7 @@ Default.parameters = {
 // )
 
 export const darkTheme = () => (
-  <Header primary> darkTheme </Header>   
+  <Header theme> darkTheme </Header>   
 )
 // export const darkTheme = myStory.bind({});
 

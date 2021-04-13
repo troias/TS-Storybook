@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 const Header = styled.h2`
 
-background: ${(props: { primary: boolean }) => props.primary ? "red" : "blue"}
+background: ${(props: { theme: any }) => props.theme ? "red" : "blue"}
 
 `
 
